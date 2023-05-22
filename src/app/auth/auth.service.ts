@@ -32,7 +32,7 @@ export class AuthService{
 
     signup(authRequestData: AuthRequestData){
         return this.httpClient.post<AuthResponseData>
-        ('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAu2NgOoeBPFMug98DgrXct4gKlv-gqa_s', 
+        ('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[]', 
         {
             email:authRequestData.email,
             password: authRequestData.password,
@@ -51,7 +51,7 @@ export class AuthService{
 
     login(authRequestData: AuthRequestData){
         return this.httpClient.post<AuthResponseData>
-        ('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAu2NgOoeBPFMug98DgrXct4gKlv-gqa_s', 
+        ('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[]', 
             {
                 email:authRequestData.email,
                 password: authRequestData.password,
